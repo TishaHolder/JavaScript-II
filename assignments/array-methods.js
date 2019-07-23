@@ -1,6 +1,7 @@
 // A local community center is holding a fund raising 5k fun run and has invited 50 small businesses to make a small donation on their behalf for some much needed updates to their facilities.  Each business has assigned a representative to attend the event along with a small donation.
 
 // Scroll to the bottom of the list to use some advanced array methods to help the event director gather some information from the businesses.
+console.log(`=====================Array-Methods======================== `);
 
 const runners = [{"id":1,"first_name":"Charmain","last_name":"Seiler","email":"cseiler0@wired.com","shirt_size":"2XL","company_name":"Divanoodle","donation":75},
 {"id":2,"first_name":"Whitaker","last_name":"Ierland","email":"wierland1@angelfire.com","shirt_size":"2XL","company_name":"Wordtune","donation":148},
@@ -66,6 +67,7 @@ runners.forEach ( (runner, index) => {
     
 });
 
+console.log(`The first and last names of all the runners: `);
 console.log(fullName);
 
 
@@ -81,6 +83,7 @@ allCaps = runners.map(runner => {
 
 });
 
+console.log(`All the runners first names coverted to uppercase: `);
 console.log(allCaps);
 
 // ==== Challenge 3: Use .filter() ====
@@ -96,6 +99,7 @@ largeShirts = runners.filter (runner => {
 
 });
 
+console.log(`Information about the runners with large sized shirts: `);
 console.log(largeShirts);
 
 // ==== Challenge 4: Use .reduce() ====
@@ -111,7 +115,8 @@ ticketPriceTotal = runners.reduce ( (accumulator, currentValue) => {
 
 }, 0);
 
-console.log (ticketPriceTotal);
+console.log(`Total of all donations: `);
+console.log (ticketPriceTotal.toFixed(2));
 
 
 // ==== Challenge 5: Be Creative ====
@@ -129,6 +134,7 @@ largeDonations = runners.filter ( runner => {
 
 });
 
+console.log(`Donors who gave more than $200: `);
 console.log(largeDonations);
 
 
@@ -143,6 +149,7 @@ taxDonations = runners.map( runner => {
 
 });
 
+console.log(`Each donation after tax deductions: `);
 console.log(taxDonations);
 
 
@@ -158,4 +165,7 @@ afterTaxDonations = taxDonations.reduce ( (accumulator, currentValue) => {
 });
 
 //toFixed converts a number into a string, keeping only two decimals
+console.log(`Donation total after taxes: `);
 console.log(afterTaxDonations.toFixed(2));
+
+console.log("************************************************************************************");
